@@ -4,7 +4,8 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Usuario;
-use Clases\Email;
+// use Clases\Email;
+use Clases\Email_deployment as Email;
 
 class LoginController {
 	public function __construct()

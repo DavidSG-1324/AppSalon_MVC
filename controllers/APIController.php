@@ -51,7 +51,7 @@ class APIController {
 
 				$cita -> eliminar();
 
-				header('Location: ' . $_SERVER['HTTP_REFERER'] . '&resultado=3');
+				header('Location: ' . $_SERVER['HTTP_REFERER'] . '&resultado=4');
 			}
 		}
 	}

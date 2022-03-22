@@ -107,8 +107,10 @@ function mostrarAviso($resultado) {
 			$mensaje = "Actualización correcta";
 			break;
 		case 3:
-			$mensaje = "Eliminación correcta";
+			$mensaje = "Servicio eliminado";
 			break;
+		case 4:
+			$mensaje = "Cita eliminada";			
 		default:
 			break;	
 	}

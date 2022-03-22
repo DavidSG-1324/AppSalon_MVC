@@ -23,6 +23,8 @@ const resumen = document.querySelector('.contenido-resumen');
 
 let fechaFormateada;
 
+horaInput.step = '600';
+
 // Iniciar
 
 window.onload = function() {
@@ -265,6 +267,11 @@ function mostrarAviso(mensaje, tipo, ubicacion, aux = '') {
 		if(ubicacion === 'hora' || (tipo === 'correcto' && aux === 'hora')) {
 			avisoPrevioHora.remove();
 		}
+	}
+
+	const avisoCorrecto = document.querySelector('p.aviso.correcto');
+	if(avisoCorrecto) {
+		avisoCorrecto.remove();
 	}
 
 	const avisoPrevioResumen = document.querySelector('.resumen');
