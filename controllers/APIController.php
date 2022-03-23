@@ -26,7 +26,7 @@ class APIController {
 		$citaId = $resultado['id'];
 
 		// Relaciona la Cita y los Servicios
-		$serviciosId = explode(",", $_POST['serviciosId']);
+		$serviciosId = explode(',', $_POST['serviciosId']);
 
 		forEach($serviciosId as $servicioId) {
 			$args = [

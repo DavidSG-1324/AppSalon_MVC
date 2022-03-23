@@ -19,7 +19,9 @@ class Router {
 
 	public function comprobarRutas() {
 		// $urlActual = $_SERVER['PATH_INFO'] ?? '/';
-		$urlActual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; // para Deployment
+		$url = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; // para Deployment
+		$urlElements = explode('?', $url); // para Deployment
+		$urlActual = $urlElements[0]; // para Deployment
 
 		$metodo = $_SERVER['REQUEST_METHOD'];
 

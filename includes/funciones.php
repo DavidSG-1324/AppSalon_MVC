@@ -68,7 +68,7 @@ function validateId($url, $tipo) {
 
 // Ordenar Hora
 function horaOrdenada($hora) {
-	$horaOrdenActual = explode(":", $hora);
+	$horaOrdenActual = explode(':', $hora);
 	if($horaOrdenActual[0] < 12) {
 		$horaOrdenNuevo = $horaOrdenActual[0] . ':' . $horaOrdenActual[1] . ' a.m.';
 	} else if($horaOrdenActual[0] === '12') {
