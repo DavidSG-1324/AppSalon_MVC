@@ -65,10 +65,10 @@ class Email_deployment {
 		$mail -> isSMTP();
 		$mail -> SMTPAuth = true;
 		$mail -> SMTPSecure = 'tls';
-		$mail -> Host = 'smtp.mailtrap.io';
-		$mail -> Port = 2525;
-		$mail -> Username = '47ab855183d3bd';
-		$mail -> Password = 'cbbde6e4d43107';
+		$mail -> Host = $_ENV['MAIL_HOST'];
+		$mail -> Port = $_ENV['MAIL_PORT'];
+		$mail -> Username = $_ENV['MAIL_USERNAME'];
+		$mail -> Password = $_ENV['MAIL_PASSWORD'];
 
 		$mail -> setFrom('cuentas@appsalon.com');
 		$mail -> addAddress('cuentas@appsalon.com', 'AppSalon.com');
@@ -79,7 +79,7 @@ class Email_deployment {
 
 		$contenido = "<html>";
 		$contenido .= "<p>Hola <strong>" . $this -> nombre . "</strong>, para recuperar tu cuenta sólo debes reestablecer tu Password haciendo Click en el siguiente enlace:</p>";
-		$contenido .= "<p><a href='http://localhost:5000/recover?token=". $this -> token ."'>Recuperar Cuenta</a></p>";
+		$contenido .= "<p><a href='" . $_ENV['SERVER_HOST'] . "recover?token=". $this -> token ."'>Recuperar Cuenta</a></p>";
 		$contenido .= "<p>Si no solicitaste el cambio puedes ignorar este mensaje.</p>";
 		$contenido .= "</html>";
 
