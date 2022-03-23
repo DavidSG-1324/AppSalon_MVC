@@ -23,7 +23,7 @@ const resumen = document.querySelector('.contenido-resumen');
 
 let fechaFormateada;
 
-horaInput.step = '600';
+const server_host = window.location.origin;
 
 // Iniciar
 
@@ -141,7 +141,8 @@ function botonesPaginador() {
 
 async function consultarAPI() {
 	try {
-		const url = 'http://localhost:5000/API/servicios';
+		const url = `${server_host}/API/servicios`;
+
 		const resultado = await fetch(url);
 		const servicios = await resultado.json();
 
@@ -433,7 +434,7 @@ async function reservarCita() {
 
 	try {
 		// Petición hacia la API
-		const url = 'http://localhost:5000/API/citas';
+		const url = `${server_host}/API/citas`;
 		const resultado = await fetch(url, {
 			method: 'POST',
 			body: datos

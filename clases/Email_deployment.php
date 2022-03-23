@@ -47,7 +47,7 @@ class Email_deployment {
 		// Definir contenido del email
 		$contenido = "<html>";
 		$contenido .= "<p>Hola <strong>" . $this -> nombre . "</strong>, has creado tu cuenta en AppSalon, para terminar el registro sólo debes hacer Click en el siguiente enlace:</p>";
-		$contenido .= "<p><a href='" . $_ENV['SERVER_HOST'] . "confirm-account?token=". $this -> token ."'>Confirmar Cuenta</a></p>";
+		$contenido .= "<p><a href='" . $_ENV['SERVER_HOST'] . "/confirm-account?token=". $this -> token ."'>Confirmar Cuenta</a></p>";
 		$contenido .= "<p>Si no creaste la cuenta puedes ignorar este mensaje.</p>";
 		$contenido .= "</html>";
 
@@ -79,7 +79,7 @@ class Email_deployment {
 
 		$contenido = "<html>";
 		$contenido .= "<p>Hola <strong>" . $this -> nombre . "</strong>, para recuperar tu cuenta sólo debes reestablecer tu Password haciendo Click en el siguiente enlace:</p>";
-		$contenido .= "<p><a href='" . $_ENV['SERVER_HOST'] . "recover?token=". $this -> token ."'>Recuperar Cuenta</a></p>";
+		$contenido .= "<p><a href='" . $_ENV['SERVER_HOST'] . "/recover?token=". $this -> token ."'>Recuperar Cuenta</a></p>";
 		$contenido .= "<p>Si no solicitaste el cambio puedes ignorar este mensaje.</p>";
 		$contenido .= "</html>";
 
