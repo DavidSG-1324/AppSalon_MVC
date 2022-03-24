@@ -2,7 +2,7 @@ includes/app.php
 includes/database.php
 clases/Email.php
 
-includes/.env
+# includes/.env
 src/
 node_modules/
 vendor/
@@ -13,3 +13,4 @@ package-lock.json
 
 datos_servidor1.txt
 cambios.txt
+
