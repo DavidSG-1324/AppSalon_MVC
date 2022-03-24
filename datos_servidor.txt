@@ -1,0 +1,5 @@
+DB_SERVER=us-cdbr-east-05.cleardb.net
+DB_USER = b7b09ea500c72c
+DB_PASSWORD=6d54e737
+DB_DATABASE=heroku_7ad9313a44094b7
+
